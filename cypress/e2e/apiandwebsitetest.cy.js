@@ -15,7 +15,7 @@ describe('My second Test', () => {
       it('Test GET Request', () => {
         cy.request({
           method: 'POST',
-          url: 'https://functionappcloude.azurewebsites.net/api/visit/testpartitionkey/VISITOR',
+          url: 'https://function.azurewebsites.net/api/visit/testpartitionkey/VISITOR',
           failOnStatusCode: false
          })
      })
