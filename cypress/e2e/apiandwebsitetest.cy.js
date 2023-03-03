@@ -1,6 +1,6 @@
 describe('My First Test', () => {
   it('Visits the resumesite', () => {
-    cy.visit('resume.finsrud.cloud')
+    cy.visit('resume2.finsrud.cloud')
   })
 })
 
