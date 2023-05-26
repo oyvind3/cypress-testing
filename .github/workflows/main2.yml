@@ -1,0 +1,23 @@
+name: Check if files exists in repo
+
+on: [push, pull_request]
+
+jobs:
+  check_files:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Check files
+      run: |
+        if [ -f ".gitignore" ]; then
+          echo ".gitignore exists"
+        else
+          echo "Error: file1.txt does not exist" && exit 1
+        fi
+        if [ -f "cypress/e2e/apiandwebsitetest.cy.js" ]; then
+          echo "apiandwebsitetest.cy.js exists"
+        else
+          echo "Error: apiandwebsitetest.cy.js does not exist" && exit 1
+        fi
